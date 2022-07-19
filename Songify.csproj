@@ -39,13 +39,22 @@
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
-		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-
-		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 
 		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="SpotifyAPI.Web" />
+	  <None Remove="Spotify\" />
+	  <None Remove="SpotifyAPI.Web.Auth" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="SpotifyAPI.Web" Version="6.2.2" />
+	  <PackageReference Include="SpotifyAPI.Web.Auth" Version="6.2.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Spotify\" />
+	</ItemGroup>
 </Project>
